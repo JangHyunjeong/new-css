@@ -1,0 +1,48 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  width: 100px;
+
+  .bar {
+    background-color: black;
+    width: 100%;
+    height: 10px;
+    & + .bar {
+      margin-top: 20px;
+    }
+
+    &:nth-child(1) {
+      background-color: red;
+      transform-origin: 0 0; /* container 가 100 * 70 */
+    }
+    &:nth-child(2) {
+      transform-origin: center center;
+    }
+    &:nth-child(3) {
+      background-color: blue;
+      transform-origin: ;
+    }
+  }
+
+  &.active {
+    .bar:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

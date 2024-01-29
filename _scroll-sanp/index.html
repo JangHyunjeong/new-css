@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Sanp</title>
+
+    <style>
+      .basic-snap-x {
+        display: flex;
+        gap: 10px;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+
+        &.snap-align-start > * {
+          scroll-snap-align: start;
+        }
+        &.snap-align-center > * {
+          scroll-snap-align: center;
+        }
+        &.snap-align-end > * {
+          scroll-snap-align: end;
+        }
+
+        > div {
+          flex-shrink: 0;
+          width: 150px;
+          aspect-ratio: 1;
+          background: pink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <h2>Start</h2>
+      <div class="basic-snap-x snap-align-start">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <h2>Center</h2>
+      <div class="basic-snap-x snap-align-center">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <h2>End</h2>
+      <div class="basic-snap-x snap-align-end">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

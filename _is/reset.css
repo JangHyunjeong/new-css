@@ -1,0 +1,3 @@
+button:is(:focus, :hover) {
+  background-color: red;
+}

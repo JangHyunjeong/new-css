@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>is</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <style>
+      /* 점수 참고 */
+      /* https://web.dev/learn/css/specificity?hl=ko */
+      /* https://web.dev/learn/css/sizing?hl=ko */
+
+      /* 이미지에 그림자 넣기 */
+      /* https://web.dev/learn/css/shadows?hl=ko */
+
+      /* 꿀 가상요소 */
+      /* https://web.dev/learn/css/pseudo-classes?hl=ko#only-of-type */
+      /* :empty */
+      /* :only-child */
+
+      /* https://web.dev/articles/5-css-snippets-every-front-end-developer-should-know-in-2024?hl=en&authuser=1 */
+
+      /* aspect-ratio */
+
+      /* h1 > b,
+      h2 > b,
+      h4 > b,
+      h5 > b,
+      h6 > b {
+        color: hotpink;
+      } */
+
+      :is(h1, h2, h3, h4, h5, h6) > b {
+        color: hotpink;
+      }
+
+      /* button:focus, button.focus {
+        background-color:sk-blue
+      } */
+
+      button:is(:focus, .focus) {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    정의 사용법
+  </body>
+</html>

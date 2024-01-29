@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:Has()</title>
+    <link rel="stylesheet" href="../common.css" />
+
+    <style>
+      h3 {
+        margin-bottom: 40px;
+      }
+
+      /* h3 바로 뒤에 h4가 온다면 */
+      /* color: red, margin-bottom: 10px */
+      h3:has(+ h4) {
+        color: red;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        color: darkgrey;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="continer">
+      <div class="container">
+        <h1>:has()</h1>
+
+        <div class="grid">
+          <div>
+            <h2>original</h2>
+
+            <h3>Article title</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam
+              ab libero neque quibusdam tempore, similique aspernatur animi unde
+              nihil rem quisquam est ad harum voluptas, repellat cum perferendis
+              odit.
+            </p>
+          </div>
+          <div>
+            <h2>hasCondition</h2>
+
+            <h3>Article title</h3>
+            <h4>article sub title</h4>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam
+              ab libero neque quibusdam tempore, similique aspernatur animi unde
+              nihil rem quisquam est ad harum voluptas, repellat cum perferendis
+              odit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

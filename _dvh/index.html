@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dvh</title>
+    <style>
+      /* reset */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* styling */
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        background-color: plum;
+        color: white;
+
+        &:nth-child(odd) {
+          background-color: seagreen;
+        }
+      }
+
+      /* dvh */
+      section {
+        /* height: 20vh; */
+        height: 20dvh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>20vh</section>
+      <section>40vh</section>
+      <section>60vh</section>
+      <section>80vh</section>
+      <section>100vh</section>
+    </div>
+    <!-- <div class="container">
+      <section>20dvh</section>
+      <section>40dvh</section>
+      <section>60dvh</section>
+      <section>80dvh</section>
+      <section>100dvh</section>
+    </div> -->
+  </body>
+</html>
